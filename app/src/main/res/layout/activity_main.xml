@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:id="@+id/linearLayout"
+    android:fitsSystemWindows="true">
+
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/app_bar"
+                layout="@layout/app_bar" />
+
+            <ListView
+                android:id="@+id/theListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/app_bar"
+
+                />
+
+
+
+            <com.melnykov.fab.FloatingActionButton
+                android:layout_alignBottom="@id/theListView"
+                android:layout_alignRight="@id/theListView"
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:onClick="setOnClickListenerFAB"
+                android:src="@android:drawable/ic_input_add"
+                android:tint="@android:color/white"
+                fab:fab_colorNormal="@color/accent"
+                fab:fab_colorPressed="@color/accent_pressed"
+                fab:fab_colorRipple="@color/ripple" />
+        </RelativeLayout>
+
+
+        <ListView
+            android:id="@+id/left_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#fff"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+
+
+</LinearLayout>

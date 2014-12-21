@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:id="@+id/linearLayout"
+    android:fitsSystemWindows="true">
+
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <include
+                android:id="@+id/app_bar"
+                layout="@layout/app_bar" />
+
+            <TextView
+                android:id="@+id/aboutTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/app_bar"
+                android:text="My name is charles"
+                android:textSize="@dimen/abc_text_size_medium_material"
+                android:layout_margin="25dp"
+                android:textColor="@android:color/primary_text_light_nodisable"
+                android:autoLink="web"
+
+                />
+
+
+
+
+        </RelativeLayout>
+
+
+        <ListView
+            android:id="@+id/left_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#fff"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+
+
+</LinearLayout>
