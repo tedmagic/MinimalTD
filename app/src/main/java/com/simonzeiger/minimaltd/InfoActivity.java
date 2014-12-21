@@ -55,8 +55,7 @@ public class InfoActivity extends ActionBarActivity {
             getSupportActionBar().setTitle("About");
             textView.setText("Hello! Thank you so much for downloading my app. This is my first ever android app, " +
                     "and their's probably way better ways of going about what I did, but that's ok. I hope you enjoy using it as much as I did making it!" +
-                    "\n\nThe source code is available on my github:" +
-                    "\n");
+                    "\n\nThe source code is available on my github: \nhttps://github.com/tedmagic/MinimalTD");
         } else {
             getSupportActionBar().setTitle("Libraries");
             textView.setText("I used a few of opensource libraries for this, here they are:" +
