@@ -60,7 +60,7 @@ public class InfoActivity extends ActionBarActivity {
             getSupportActionBar().setTitle("Libraries");
             textView.setText("I used a few of opensource libraries for this, here they are:" +
                     "\n\nTinyDB:" +
-                    "\nhttps://github.com/kcochibili/TinyDB--Android-Shared-Preferences-Turbo/blob/master/TinyDB.java" +
+                    "\nhttps://github.com/kcochibili/TinyDB--Android-Shared-Preferences-Turbo/" +
                     "\n\nFloating Action Button:" +
                     "\nhttps://github.com/makovkastar/FloatingActionButton");
         }
