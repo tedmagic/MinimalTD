@@ -46,7 +46,7 @@
                 android:tint="@android:color/white"
                 fab:fab_colorNormal="@color/accent"
                 fab:fab_colorPressed="@color/accent_pressed"
-                fab:fab_colorRipple="@color/ripple" />
+                fab:fab_colorRipple="@color/accent_ripple" />
         </RelativeLayout>
 
 
