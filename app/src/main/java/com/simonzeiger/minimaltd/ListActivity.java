@@ -47,6 +47,8 @@ public class ListActivity extends ActionBarActivity {
     static ArrayList<String> listItems = new ArrayList<>();
 
 
+
+
     @Override
     protected void onSaveInstanceState(Bundle outState) {
 
@@ -59,12 +61,19 @@ public class ListActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Intent intent = new Intent();
+        String title = intent.getStringExtra("TITLE");
+
+
 
         initView();
 
         if (toolbar != null) {
             setSupportActionBar(toolbar);
         }
+
+        getSupportActionBar().setTitle(title);
+
         initDrawer();
 
 
@@ -215,6 +224,9 @@ public class ListActivity extends ActionBarActivity {
 
 
         final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setColorNormalResId(R.color.primary);
+        fab.setColorPressedResId(R.color.primary_pressed);
+        fab.setColorRippleResId(R.color.primary_ripple);
         if (listItems.size() != 0) fab.attachToListView(mListView);
 
 
