@@ -35,14 +35,14 @@ public class FABActivity extends ActionBarActivity {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
         if (MainActivity.isEdit) {
 
-            getSupportActionBar().setTitle("Edit");
+            getSupportActionBar().setTitle("Edit Task");
             button.setText("Edit");
 
 
             task.setText(MainActivity.oldText);
             task.setSelection(task.getText().length());
 
-        } else getSupportActionBar().setTitle("New");
+        } else getSupportActionBar().setTitle("New Task");
 
 
     }

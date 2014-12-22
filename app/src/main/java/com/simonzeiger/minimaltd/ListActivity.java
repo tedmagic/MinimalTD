@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import TinyDB.TinyDB;
 
 
-public class MainActivity extends ActionBarActivity {
+public class ListActivity extends ActionBarActivity {
 
     public static boolean isBackpressed = false;
     public static boolean isEdit = false;
@@ -125,9 +125,9 @@ public class MainActivity extends ActionBarActivity {
     private void initView() {
         boolean isAbout = true;
         leftDrawerList = (ListView) findViewById(R.id.left_drawer);
-        toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.app_bar);
+        toolbar = (Toolbar) findViewById(R.id.app_bar);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
-        navigationDrawerAdapter = new ArrayAdapter<>(MainActivity.this,R.layout.navlistitem, leftSliderData);
+        navigationDrawerAdapter = new ArrayAdapter<>(ListActivity.this,R.layout.navlistitem, leftSliderData);
         leftDrawerList.setAdapter(navigationDrawerAdapter);
         leftDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -207,7 +207,6 @@ public class MainActivity extends ActionBarActivity {
                 myFragment.show(getFragmentManager(), "theDialog");
                 itemLongPressed = position;
                 longPress = true;
-                allDelete = false;
 
 
                 return true;
@@ -295,7 +294,7 @@ public class MainActivity extends ActionBarActivity {
                 String nameSentBack = data.getStringExtra("Task");
                 listItems.set(itemPressed, nameSentBack);
                 adapter.notifyDataSetChanged();
-                MainActivity.isEdit = false;
+                ListActivity.isEdit = false;
 
             } else {
                 String nameSentBack = data.getStringExtra("Task");
